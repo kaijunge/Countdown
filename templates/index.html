@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<h1>2019 Engineering Part IB Countdown</h1>
+<style>
+p {
+  text-align: center;
+  margin-top:0px;
+  letter-spacing: 0px;
+}
+
+/* Split the screen in half */
+.split {
+  height: 90%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: white;
+  font-size: 25px;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: white;
+  font-size: 25px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 30px;
+  background-color: white;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+  <div class="split left">
+  <div class="centered">
+    <p><font color=#ff0000>Paper 1: Mechanics</font></p>
+    <p id="p1"></p>
+    
+    <p><font color=#ff9900>Paper 2: Structures</font></p>
+    <p id="p2"></p>
+    
+    <p><font color=#808000>Paper 3: Materials</font></p>
+    <p id="p3"></p>
+    
+    <p><font color=#666633>Paper 4: Thermofluid Mechanics</font></p>
+    <p id="p4"></p>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <p><font color=#33cc33>Paper 5: Electrical Engineering</font></p>
+    <p id="p5"></p>
+    
+    <p><font color=#009999>Paper 6: Information Engineering</font></p>
+    <p id="p6"></p>
+    
+    <p><font color=#0000ff>Paper 7: Mathematical Methods</font></p>
+    <p id="p7"></p>
+    
+    <p><font color=#666699>Paper 8: Selected Topics</font></p>
+    <p id="p8"></p>
+  </div>
+</div>
+
+
+<div class="footer">
+  <a href="https://www-edc.eng.cam.ac.uk/people/tk291.jpg" style="color:white">Good Luck!</a>
+</div>
+<script type="text/javascript">
+
+var days = 0;
+var hours = 0;
+var minutes = 0;
+var seconds = 0;
+var ID = 0;
+var distance = 0;
+var ids = ["p3","p4","p5","p6","p8","p7","p2","p1"];
+var times = [new Date("Jun 3,  2019 9:00:00" ).getTime(),
+             new Date("Jun 4,  2019 9:00:00" ).getTime(),
+             new Date("Jun 5,  2019 14:00:00").getTime(),
+             new Date("Jun 6,  2019 14:00:00").getTime(),
+             new Date("Jun 7,  2019 9:00:00" ).getTime(),
+             new Date("Jun 7,  2019 14:00:00").getTime(),
+             new Date("Jun 10, 2019 14:00:00").getTime(),
+             new Date("Jun 11, 2019 14:00:00").getTime()
+             ]
+    
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    for(i=0; i<8; i++) {
+        distance=times[i] - now;
+        ID = ids[i];
+        
+        //calculate and print time
+        calctime();
+        printtime();
+    }
+  
+}, 1000);
+    
+// calculate hours mins etc
+function calctime() {
+    days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    seconds = Math.floor((distance % (1000 * 60)) / 1000);
+}
+    
+// print time on screen
+function printtime() {
+    document.getElementById(ID).innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById(ID).innerHTML = "EXPIRED";
+    }
+}
+</script>
+
+</body>
+</html>
