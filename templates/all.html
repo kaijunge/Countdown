@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>IIA exam counter</title>
+  <title>All subjects</title>
   <link href="{{ url_for('.static', filename='style_2.css') }}" rel="stylesheet">
 </head>
 <body>
 
 <header>
-  <h1>2020 IIA exam counter</h1>
+  <h1>2020 IIA exam counter - All subjects</h1>
   <nav>
     <ul class="nav">
-      <li><a class="current" href="{{ url_for('index') }}">Home</a></li>
-      <li><a href="{{ url_for('all') }}">All Subjects</a></li>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a class="current" href="{{ url_for('all') }}">All Subjects</a></li>
       <li class="dropdown">
         <a href="{{ url_for('grp_index') }}">Subject Groups</a>
         <div class="dropdown-content">
@@ -30,8 +30,7 @@
   </nav>
 </header>
 
-<h3 id = "login"></h3>
-<p id = "blah"></p>
+
 <table id = "main_table" class="table">
   <thead>
     <tr>
@@ -45,24 +44,27 @@
   </tbody>
   </table>
   
-    <script type="text/javascript" src="{{ url_for('.static', filename='personal_data.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('.static', filename='dates_2.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('.static', filename='index_2.js') }}"></script>
-    <script type="text/javascript">
+<script type="text/javascript" src="{{ url_for('.static', filename='dates_2.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('.static', filename='index_2.js') }}"></script>
+<script type="text/javascript">
+  // Update the count down every 1 second
+  setInterval(function() {
+      // Get todays date and time
 
-      console.log(crsid);
-      document.getElementById("login").innerHTML = " Logged in as " + crsid + ". These are your enrolled exams."
-      // Update the count down every 1 second
-      setInterval(function() {
-          // Get todays date and time
-  
-          clearTable();
-          populateTable(personal);
-        
-      }, 1000);
-  
-    </script>
-  
+      clearTable();
+      populateTable(A);
+      populateTable(B);
+      populateTable(C);
+      populateTable(D);
+      populateTable(E);
+      populateTable(G);
+      populateTable(G);
+      populateTable(Other);
+    
+  }, 1000);
+
+</script>
+
 
 </body>
 </html>

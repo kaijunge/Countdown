@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Other</title>
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>2020 IIA exam counter - Other subjects</h1>
+  <nav>
+    <ul class="nav">
+      <li><a href="../index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="index.html">Subject Groups</a>
+        <div class="dropdown-content">
+          <a href="A.html">Group A</a>
+          <a href="B.html">Group B</a>
+          <a href="C.html">Group C</a>
+          <a href="D.html">Group D</a>
+          <a href="E.html">Group E</a>
+          <a href="F.html">Group F</a>
+          <a href="G.html">Group G</a>
+          <a class="current" href="other.html">Other</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<table id = "main_table" class="table">
+<thead>
+  <tr>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Countdown</th>
+  </tr>
+</thead>
+<tbody>
+  <!-- to be filled in by json-->
+</tbody>
+</table>
+
+  <script type="text/javascript" src="../Data/dates.js"></script>
+  <script type="text/javascript" src="../index.js"></script>
+  <script type="text/javascript">
+    // Update the count down every 1 second
+    setInterval(function() {
+        // Get todays date and time
+
+        clearTable();
+        populateTable(Other);
+      
+    }, 1000);
+
+  </script>
+
+</body>
+</html>

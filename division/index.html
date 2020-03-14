@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>IIA exam counter</title>
-  <link href="style.css" rel="stylesheet">
+  <title>All groups</title>
+  <link href="../style.css" rel="stylesheet">
 </head>
 <body>
 
 <header>
-  <h1>2020 IIA exam counter</h1>
+  <h1>2020 IIA exam counter - All subject groups</h1>
   <nav>
     <ul class="nav">
-      <li><a class="current" href="index.html">Home</a></li>
+      <li><a href="../index.html">Home</a></li>
       <li class="dropdown">
-        <a href="division/index.html">Subject Groups</a>
+        <a class="current" href="index.html">Subject Groups</a>
         <div class="dropdown-content">
-          <a href="division/A.html">Group A</a>
-          <a href="division/B.html">Group B</a>
-          <a href="division/C.html">Group C</a>
-          <a href="division/D.html">Group D</a>
-          <a href="division/E.html">Group E</a>
-          <a href="division/F.html">Group F</a>
-          <a href="division/G.html">Group G</a>
-          <a href="division/other.html">Other</a>
+          <a href="A.html">Group A</a>
+          <a href="B.html">Group B</a>
+          <a href="C.html">Group C</a>
+          <a href="D.html">Group D</a>
+          <a href="E.html">Group E</a>
+          <a href="F.html">Group F</a>
+          <a href="G.html">Group G</a>
+          <a href="other.html">Other</a>
         </div>
       </li>
     </ul>
@@ -43,8 +43,8 @@
 </tbody>
 </table>
 
-  <script type="text/javascript" src="Data/dates.js"></script>
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="../Data/dates.js"></script>
+  <script type="text/javascript" src="../index.js"></script>
   <script type="text/javascript">
     // Update the count down every 1 second
     setInterval(function() {
@@ -59,7 +59,6 @@
         populateTable(G);
         populateTable(G);
         populateTable(Other);
-      
       
     }, 1000);
 
