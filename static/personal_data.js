@@ -1,3 +1,3 @@
-var personal_raw ='{"3C5": ["Dynamics", "Apr 21,  2020 14:00:00"], "3C8": ["Machine Design", "Apr 23,  2020 14:00:00"], "3E11": ["Environmental Sustainability & Business", "Apr 30,  2020 9:30:00"], "3F1": ["Signals and Systems", "Apr 21,  2020 9:30:00"], "3F3": ["Statistical Signal Processing", "Apr 29,  2020 9:30:00"], "3B4": ["Electric Drive Systems", "Apr 20,  2020 14:00:00"], "3F2": ["Systems and Control", "Apr 29,  2020 14:00:00"], "3F8": ["Inference", "Apr 22,  2020 14:00:00"], "3G4": ["Medical Imaging and 3-D Computer Graphics", "Apr 27,  2020 14:00:00"], "3M1": ["Mathematical Methods", "Apr 22,  2020 9:30:00"]}';
+var personal_raw ='{}';
 var personal = JSON.parse(personal_raw);
 var crsid = "kcj21"
